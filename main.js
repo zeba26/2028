@@ -108,11 +108,22 @@ function moveBall(){
 
     //Surrounding wall collision detection(x-axis)
     //right and left walls
-    
+    if(ball.x <= 0){
+        ball.dx = 4;
+    }
+    if(ball.x > canvas.width){
+        ball.dx = -4;
+    }
 
     //Surrounding wall collision detection(y-axis)
     //top and bottom walls
     
+    if(ball.y <= 0){
+        ball.dy = 4;
+    }
+    if(ball.y > canvas.height){
+        ball.dy = -4;
+    }
 
     //Paddle collision functionality
     
@@ -128,7 +139,7 @@ function moveBall(){
 
     //Lose on missing paddle
     if(ball.y + ball.size > canvas.height){
-        
+
     }
 }
 
