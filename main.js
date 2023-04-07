@@ -121,7 +121,7 @@ function moveBall(){
     if(ball.y <= 0){
         ball.dy = 4;
     }
-    if(ball.y > canvas.height){
+    if(ball.y + ball.size > paddle.y){
         ball.dy = -4;
     }
 
